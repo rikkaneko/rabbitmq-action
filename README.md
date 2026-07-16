@@ -7,7 +7,7 @@ GitHub Action for publishing a UTF-8 payload to a RabbitMQ or AMQP exchange or q
 Use this action from a workflow after checking out the repository that contains it, or reference a released tag from your action repository.
 
 ```yaml
-- uses: your-org/rabbitmq-action@v1
+- uses: rikkaneko/rabbitmq-action@v1.0.0
   with:
     amqp_url: ${{ secrets.AMQP_URL }}
     exchange: content.events
@@ -43,7 +43,7 @@ Authentication inputs:
 Publish to a queue:
 
 ```yaml
-- uses: your-org/rabbitmq-action@v1
+- uses: rikkaneko/rabbitmq-action@v1.0.0
   with:
     amqp_url: ${{ secrets.AMQP_URL }}
     queue: content-jobs
@@ -54,7 +54,7 @@ Publish to a queue:
 Publish to an exchange with headers:
 
 ```yaml
-- uses: your-org/rabbitmq-action@v1
+- uses: rikkaneko/rabbitmq-action@v1.0.0
   with:
     amqp_url: ${{ secrets.AMQP_URL }}
     amqp_username: ${{ secrets.AMQP_USERNAME }}
@@ -71,7 +71,7 @@ Publish to an exchange with headers:
 Publish with mTLS and consumer acknowledgement:
 
 ```yaml
-- uses: your-org/rabbitmq-action@v1
+- uses: rikkaneko/rabbitmq-action@v1.0.0
   with:
     amqp_url: ${{ secrets.AMQP_URL }}
     amqp_cert_chain: ${{ secrets.AMQP_CERT_CHAIN }}
