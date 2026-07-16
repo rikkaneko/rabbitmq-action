@@ -95,4 +95,4 @@ pnpm run build
 
 ## License
 
-MIT
+GPLv3

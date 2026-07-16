@@ -1,8 +1,11 @@
 {
-  "name": "rabbitmq-action",
+  "name": "@rikkaneko/rabbitmq-action",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rikkaneko/rabbitmq-action.git"
+  },
   "version": "1.0.0",
   "description": "GitHub Action for publishing payloads to RabbitMQ or AMQP exchanges and queues.",
-  "private": true,
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
