@@ -1,0 +1,48 @@
+name: RabbitMQ Publish
+description: Publish payload to any RabbitMQ or AMQP exchange or queue.
+author: rikkaneko
+inputs:
+  amqp_url:
+    description: AMQP connection URL.
+    required: true
+  amqp_username:
+    description: (Optional) AMQP username for plain authentication.
+    required: false
+  amqp_password:
+    description: (Optional) AMQP password for plain authentication.
+    required: false
+  amqp_cert_chain:
+    description: (Optional) Client certificate PEM value for mTLS authentication.
+    required: false
+  amqp_cert_key:
+    description: (Optional) Client private key PEM value for mTLS authentication.
+    required: false
+  amqp_cert_ca:
+    description: (Optional) CA certificate PEM value for mTLS authentication.
+    required: false
+  exchange:
+    description: Exchange to publish to when queue is not provided.
+    required: false
+  queue:
+    description: Queue name for default-exchange publishing.
+    required: false
+  route_key:
+    description: (Optional) Routing key for exchange publishing.
+    required: false
+    default: ''
+  header:
+    description: (Optional) Newline-separated key=value AMQP headers.
+    required: false
+  payload:
+    description: Message payload
+    required: true
+  require_ack:
+    description: Whether to wait for a direct reply-to consumer acknowledgement.
+    required: false
+    default: 'false'
+  ack_timeout:
+    description: Timeout in milliseconds when require_ack is true.
+    required: false
+runs:
+  using: node24
+  main: dist/index.js
