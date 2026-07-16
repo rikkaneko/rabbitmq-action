@@ -1,6 +1,11 @@
 name: RabbitMQ Publish
 description: Publish payload to any RabbitMQ or AMQP exchange or queue.
 author: rikkaneko
+
+branding:
+  icon: 'upload-cloud'
+  color: 'orange'
+
 inputs:
   amqp_url:
     description: AMQP connection URL.
