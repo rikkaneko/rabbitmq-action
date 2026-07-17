@@ -4,12 +4,12 @@
     "type": "git",
     "url": "git+https://github.com/rikkaneko/rabbitmq-action.git"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "GitHub Action for publishing payloads to RabbitMQ or AMQP exchanges and queues.",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --platform=node --target=node24 --format=esm --outfile=dist/index.js",
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node24 --format=cjs --outfile=dist/index.cjs",
     "lint": "eslint src --ext .ts",
     "test": "vitest run",
     "format": "prettier --write .",

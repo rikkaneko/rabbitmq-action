@@ -240,4 +240,6 @@ async function run(): Promise<void> {
   }
 }
 
-await run();
+void (async (): Promise<void> => {
+  await run();
+})();
