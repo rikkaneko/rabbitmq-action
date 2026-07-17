@@ -150,7 +150,7 @@ async function run(): Promise<void> {
       : { exchange: inputs.exchange ?? '', routingKey: inputs.routeKey };
     let connectionOptions: any = {};
 
-    core.info(`Publishing AMQP payload to ${inputs.queue ? 'queue' : 'exchange'} target.`);
+    core.info(`Publishing payload to ${inputs.queue ? 'queue' : 'exchange'} target.`);
 
     if (inputs.amqpCertChain && inputs.amqpCertKey && inputs.amqpCertCa) {
       core.info('[amqp] Using mTLS authentication.');
@@ -218,7 +218,7 @@ async function run(): Promise<void> {
       await ackPromise;
     }
 
-    core.info('AMQP payload published successfully.');
+    core.info(`[amqp] Published payload to ${inputs.exchange ?? inputs.queue ?? inputs.amqpUrl}.`);
   } catch (error) {
     core.setFailed(error instanceof Error ? error.message : String(error));
   } finally {
